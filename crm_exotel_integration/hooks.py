@@ -29,8 +29,7 @@ app_license = "MIT"
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 doctype_js = {
-    # "Lead" : "custom_scripts/lead.js"
-    "Lead" : "public/js/lead.js"
+    "Lead" : "public/js/lead_custom.js"
 }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -127,6 +126,11 @@ doctype_js = {
 # 		"on_trash": "method"
 # 	}
 # }
+doc_events = {
+	"Call Log": {
+		"after_insert": "crm_exotel_integration.crm_exotel_integration.override.call_log.after_insert",
+	}
+}
 
 # Scheduled Tasks
 # ---------------
