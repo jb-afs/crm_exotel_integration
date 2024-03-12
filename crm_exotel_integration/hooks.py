@@ -94,7 +94,14 @@ doctype_js = {
 # See frappe.core.notifications.get_notification_config
 
 # notification_config = "crm_exotel_integration.notifications.get_notification_config"
-
+fixtures = [
+    {"dt": "Role", "filters": [
+        [
+            "name", "in", ["Exotel Outbound Call"]
+        ]
+    ]},
+    
+]
 # Permissions
 # -----------
 # Permissions evaluated in scripted ways
