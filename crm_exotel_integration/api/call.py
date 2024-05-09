@@ -27,7 +27,8 @@ def initiating_call_numbers(from_no, to_no, caller_id):
         data = {
             'From': from_no,
             'To': to_no,
-            'CallerId': caller_id
+            'CallerId': caller_id,
+            'Record': 'true',
         }
         auth = (exotel_api_key, exotel_api_token)
         res = requests.post(call_url, data=data, auth=auth)
