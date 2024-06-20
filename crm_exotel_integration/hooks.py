@@ -100,6 +100,13 @@ fixtures = [
             "name", "in", ["Exotel Outbound Call"]
         ]
     ]},
+    {"dt": "Custom Field", "filters": [
+        [
+            "name", "in", [
+                "Lead-custom_repossession_date","Lead-custom_ageing_in_days","Lead-custom_ageing_bucket"
+            ]
+        ]
+    ]},
     
 ]
 # Permissions
@@ -136,7 +143,10 @@ fixtures = [
 doc_events = {
 	"Call Log": {
 		"after_insert": "crm_exotel_integration.crm_exotel_integration.override.call_log.after_insert",
-	}
+	},
+    "Lead":{
+        "validate":"crm_exotel_integration.crm_exotel_integration.override.lead.validate"
+    }
 }
 
 # Scheduled Tasks
