@@ -29,7 +29,8 @@ app_license = "MIT"
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 doctype_js = {
-    "Lead" : "public/js/lead_custom.js"
+    "Lead" : "public/js/lead_custom.js",
+    "Item" : "public/js/item.js"
 }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -102,11 +103,9 @@ fixtures = [
     ]},
     {"dt": "Custom Field", "filters": [
         [
-            "name", "in", [
-                "Lead-custom_repossession_date","Lead-custom_ageing_in_days","Lead-custom_ageing_bucket"
-            ]
+            "name", "in", ["Item-custom_ageing_bucket"]
         ]
-    ]},
+    ]}
     
 ]
 # Permissions
@@ -144,8 +143,8 @@ doc_events = {
 	"Call Log": {
 		"after_insert": "crm_exotel_integration.crm_exotel_integration.override.call_log.after_insert",
 	},
-    "Lead":{
-        "validate":"crm_exotel_integration.crm_exotel_integration.override.lead.validate"
+    "Item":{
+        "validate":"crm_exotel_integration.crm_exotel_integration.override.item.validate"
     }
 }
 
