@@ -1,0 +1,49 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{min_value}-{max_value}",
+ "creation": "2024-06-20 14:44:25.554149",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "min_value",
+  "max_value"
+ ],
+ "fields": [
+  {
+   "fieldname": "min_value",
+   "fieldtype": "Data",
+   "label": "Min Value"
+  },
+  {
+   "fieldname": "max_value",
+   "fieldtype": "Data",
+   "label": "Max Value"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-20 14:46:01.807020",
+ "modified_by": "Administrator",
+ "module": "Crm Exotel Integration",
+ "name": "Ageing Bucket",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
